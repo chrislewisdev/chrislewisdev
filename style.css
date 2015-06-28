@@ -1,0 +1,48 @@
+body
+{
+	font-family:Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	max-width:900px;
+	margin:0 auto 0 auto;
+	padding:0 10px 0 10px;
+	/*background-color:#F2F2F5;*/
+	font-size:125%;
+}
+
+h1, h2, h3
+{
+	/*color:#155185;*/
+	font-weight:bolder;
+}
+
+h1
+{
+	text-align:center;
+	line-height:100%;
+}
+
+h2
+{
+	text-align:center;
+	/*border-top:1px solid #355B9B;
+	border-bottom:1px solid #355B9B;
+	background-color:#DBEDF2;*/
+}
+
+.title
+{
+	font-size:400%;
+	margin-top:.2em;
+	margin-bottom:.2em;
+}
+
+.secondary-title
+{
+	font-size:200%;
+	margin-top:.2em;
+	margin-bottom:.2em;
+}
+
+.pull-right
+{
+	text-align:right;
+}
