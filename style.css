@@ -42,6 +42,12 @@ h2, h3
 		width:75%;
 		float:left;
 	}
+	
+	#body .p-group p
+	{
+		padding-top:0.4em;
+		margin-bottom:0.2em;
+	}
 }
 
 .title
@@ -69,14 +75,19 @@ h2, h3
 	text-align:right;
 }
 
-#projects img
+p.image
 {
-	float:right;
+	text-align:center;
+	float:left;
+	width:25%;
+}
+
+p.image img
+{
 	max-width:33%;
 	max-height:300px;
 	width:auto;
 	height:auto;
-	margin-left:8px;
 }
 
 #header
@@ -97,4 +108,17 @@ h2, h3
 .clear
 {
 	clear:both;
+}
+
+a
+{
+	color:#027b68;
+}
+a:hover
+{
+	color:#02967F;
+}
+a:visited
+{
+	color:#006B5A;
 }
