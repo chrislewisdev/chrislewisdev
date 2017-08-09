@@ -28,6 +28,7 @@ body
 .header
 {
     height:200px;
+    box-shadow: -1px 4px 5px -3px rgba(0,0,0,0.5);
 }
 
 .header .banner
@@ -43,7 +44,7 @@ body
 {
     position:absolute;
     z-index:-1;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.7);
     width:100%;
     height:200px;
 }
@@ -51,29 +52,13 @@ body
 .header h1
 {
     margin:0;
-    padding-top:80px;
+    padding-top:55px;
     color:white;
-}
-
-@media screen and (min-width:800px)
-{
-    .contact-details
-    {
-        float:left;
-        width:30%;
-    }
-
-    .content-body
-    {
-        float:left;
-        width:69%;
-        padding-left:1%;
-    }
 }
 
 a.social
 {
-    color:black;
+    color:white;
     text-decoration:none;
     padding-right:10px;
 }
