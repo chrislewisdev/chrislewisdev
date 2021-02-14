@@ -89,3 +89,11 @@ figure.highlight pre {
     padding: 10px;
     overflow-x: auto;
 }
+
+.post-content {
+    img {
+        display: block;
+        max-width: 70%;
+        margin: 0 auto 0 auto;
+    }
+}
