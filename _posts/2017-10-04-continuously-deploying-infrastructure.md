@@ -257,4 +257,4 @@ Even if there are concerns around automatically having infrastructure changes ro
 
 If you haven't already, do [check out the code samples](https://github.com/chrislewisdev/ddd-by-night-oct-2017) and maybe even try setting this project up in your own account!
 
-Thanks for reading! If you have any questions or feedback feel free to reply to me here or [on Twitter](https://twitter.com/chrislewisdev).
+Thanks for reading!
