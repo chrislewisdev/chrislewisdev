@@ -10,6 +10,9 @@ body {
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -57,7 +60,7 @@ body {
     }
 
     nav {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
@@ -67,7 +70,12 @@ nav a {
 }
 
 .content-body {
+    flex-grow: 1;
     margin-top: 25px;
+
+    :first-child {
+        margin-top: 0;
+    }
 }
 
 a {
@@ -102,4 +110,11 @@ figure.highlight pre {
         background: #c5c5c5;
         padding: 0 3px 0 3px;
     }
+}
+
+.footer {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
 }
