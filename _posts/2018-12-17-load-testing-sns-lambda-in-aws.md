@@ -20,7 +20,7 @@ After a series of tests run during development of our system, we can now answer 
 
 ## The Test Setup
 
-To run our load test, essentially all we had to do was start pumping large amounts of messages into SNS via code. Our approach was to just write a C# program to concurrently send X copies of a message into SNS as fast as it could using Task.WhenAll. The code is [here](https://gist.github.com/chrislewisdev/32b16cb5c07f57537f399e9453b5c4cf) if you're interested, though you could definitely accomplish the same in your language of choice since we're really not doing anything special to make it work.
+To run our load test, essentially all we had to do was start pumping large amounts of messages into SNS via code. Our approach was to just write a C# program to concurrently send X copies of a message into SNS as fast as it could using `Task.WhenAll`. The code is [here](https://gist.github.com/chrislewisdev/32b16cb5c07f57537f399e9453b5c4cf) if you're interested, though you could definitely accomplish the same in your language of choice since we're really not doing anything special to make it work.
 
 We ran our tests in factors of 10, noting down how messages were successful/unsuccessful for each test.
 
