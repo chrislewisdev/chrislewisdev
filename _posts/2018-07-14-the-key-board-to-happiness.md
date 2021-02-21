@@ -4,6 +4,8 @@ title: The key(board) to happiness
 description: A blog version of my lightning talk about keyboards.
 ---
 
+*This post is a written version of my lightning talk of the same name. You can also [watch a recording of the talk on YouTube](https://youtu.be/9iKCUqLqCl8?t=580).*
+
 Let's talk about happiness.
 
 Happy developers are better developers, right? If you're feeling stressed or upset, it only makes it more difficult for you to do your best work.

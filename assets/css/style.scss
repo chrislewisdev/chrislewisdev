@@ -8,22 +8,22 @@ body {
     background-color: #fff;
     color: #1a1a1a;
     margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.container {
-    max-width: 95%;
-    margin: 0 auto 0 auto;
+@media screen and (max-width:700px) {
+    body {
+        font-size: 1rem;
+    }
 }
 
-@media screen and (min-width:700px) {
-    .container {
-        max-width: 90%;
-    }
+.container {
+    max-width: 92%;
+    margin: 0 auto 0 auto;
 }
 
 @media screen and (min-width:1000px) {
@@ -91,7 +91,7 @@ blockquote {
     margin-left: 30px;
     border-left: 2px solid grey;
     padding-left: 10px;
-    font-size: 12px;
+    font-size: 90%;
 }
 
 figure.highlight pre {
@@ -115,6 +115,21 @@ figure.highlight pre {
 .footer {
     margin-top: 50px;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 80%;
     text-align: center;
+}
+
+@media screen and (max-width:700px) {
+    figure.highlight {
+        margin: 10px 0 10px 0;
+        font-size: 90%;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+
+    .post-content img {
+        max-width: 90%;
+    }
 }

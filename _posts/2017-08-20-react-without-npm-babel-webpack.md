@@ -4,6 +4,8 @@ title: React without npm, Babel, or webpack
 description: A look at how to get started using React without all the requirements of package managers and bundlers.
 ---
 
+*This 2017 blog post is a little out of date now, and in fact React now have their own getting started guide that does not require any build tooling: ["Add React to a Website"](https://reactjs.org/docs/add-react-to-a-website.html). That said, this post may still be useful for understanding how all these components relate in a React app, so feel free to give it a read anyway ;)*
+
 When I start learning a new tool or framework, I like to try and keep it as isolated from other concepts as possible, so I can focus just on that one thing and nothing else. It avoids frustration with auxiliary tooling and helps me make sure I understand exactly what is happening in any given example.
 
 In the case of learning React, I wanted to have a full working example in a plain HTML/Javascript file that I can simply open in any browser- no development webserver or anything involved.
@@ -115,32 +117,32 @@ That's honestly all it takes to get React working without all the guff of packag
 {% highlight html %}
 {% raw %}
 <html>
-    <head>
-        <title>React Hello World</title>
-        <script src="https://unpkg.com/react@15/dist/react.js"></script>
-        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-    </head>
-    <body>
-        <div id="root"></div>
+  <head>
+    <title>React Hello World</title>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
 
-        <script>
-            window.onload = function()
-            {
-                class Greetings extends React.Component
-                {
-                    render()
-                    {
-                        return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
-                    }
-                }
+    <script>
+      window.onload = function()
+      {
+        class Greetings extends React.Component
+        {
+          render()
+          {
+            return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
+          }
+        }
 
-                ReactDOM.render(
-                    React.createElement(Greetings, { name : 'Chris' }),
-                    document.getElementById('root')
-                );
-            };
-        </script>
-    </body>
+        ReactDOM.render(
+          React.createElement(Greetings, { name : 'Chris' }),
+          document.getElementById('root')
+        );
+      };
+    </script>
+  </body>
 </html>
 {% endraw %}
 {% endhighlight %}
@@ -158,9 +160,9 @@ As I mentioned earlier, you can provide as many children to an element created w
 {% highlight javascript %}
 {% raw %}
 React.createElement('div', null,
-    React.createElement(Greetings, { name : 'Chris' }),
-    React.createElement(Greetings, { name : 'Ming' }),
-    React.createElement(Greetings, { name : 'Joe' })
+  React.createElement(Greetings, { name : 'Chris' }),
+  React.createElement(Greetings, { name : 'Ming' }),
+  React.createElement(Greetings, { name : 'Joe' })
 )
 {% endraw %}
 {% endhighlight %}
@@ -169,7 +171,7 @@ Simple! And honestly not too ugly if you space out the function calls sensibly.
 
 ### I want all the extra tooling but don't want to set it up myself
 
-The React website has a list of [Starter Kit](https://reactjs.org/community/starter-kits.html) projects that can help you get up and running quickly!
+The React website has a ["Create a new React App"](https://reactjs.org/docs/create-a-new-react-app.html) that will probably point you in the right direction!
 
 *Update 11/10/2018: Originally I was referring to the [Fountain](https://github.com/FountainJS/generator-fountain-react) project, but this doesn't seem to be recently maintained and the original website domain no longer belongs to them. Use with caution.*
 
@@ -181,10 +183,10 @@ The above examples should work fine in any modern browser, but if you're conscio
 {% raw %}
 var Greetings = React.createClass(
 {
-    render: function ()
-    {
-        return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
-    }
+  render: function ()
+  {
+    return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
+  }
 });
 {% endraw %}
 {% endhighlight %}

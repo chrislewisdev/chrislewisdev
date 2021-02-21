@@ -1,5 +1,3 @@
-- Add a footer (so blog pages don't end abruptly)
 - Fill out showcases page
 - Settle on typography
 - Banner image - can we compress it more? Replace it with something else?
-- Responsive improvements
