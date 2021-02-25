@@ -73,7 +73,7 @@ nav a {
     flex-grow: 1;
     margin-top: 25px;
 
-    :first-child {
+    h1:first-child {
         margin-top: 0;
     }
 }
@@ -85,6 +85,16 @@ a {
 h1, h2, h3, h4 {
     margin-top: 25px;
     margin-bottom: 0px;
+}
+
+.post {
+    h3 {
+        margin-top: 0.5rem;
+    }
+
+    p {
+        margin-top: 0.5rem;
+    }
 }
 
 blockquote {
