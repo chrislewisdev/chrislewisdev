@@ -1,1 +1,7 @@
 permalink: /posts/:slug/
+
+collections:
+  showcase_items:
+    permalink: /showcase/:slug/
+    output: true
+    category: true

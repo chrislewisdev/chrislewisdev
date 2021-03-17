@@ -6,45 +6,44 @@ permalink: /showcase/
 
 <h1>Showcase</h1>
 
-<p>I like to build stuff. I'm just gonna list some things for now to jog my memory:</p>
+<p>I like to build stuff. TODO say something else here</p>
 
 <h2>Games</h2>
 
 <p>When I have the time/energy to work on a side project, it's almost definitely a game of some sort. I've worked on various games over the years, most of which remain broken and unfinished, but some of which I do manage to complete. You can check out some of the completed ones here :)</p>
 
+{% assign games = site.showcase_items | where: "category", "Games" %}
 <ul>
-    <li>Clean That Castle</li>
-    <li>Archery Princess</li>
-    <li>Face Invaders</li>
-    <li>Island of Funk</li>
-    <li>Blind</li>
+    {% for game in games %}
+        <li><a href="{{ game.url }}">{{ game.title }}</a></li>
+    {% endfor %}
 </ul>
 
 <h2>Talks</h2>
 
 <p>I find it easiest to express myself through prepared talks, be it at conferences or just internal talks at work. These are some of the ones I've done at conferences or meetups, and should give you a bit of an idea of what sorts of stuff I like talking about!</p>
 
+{% assign talks = site.showcase_items | where: "category", "Talks" %}
 <ul>
-    <li>From web-scale to micro-scale</li>
-    <li>The Human Side of Security</li>
-    <li>The key(board) to happiness</li>
-    <li>Epic Bug Hunt: The case of the missing forms</li>
+    {% for talk in talks %}
+        <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
+    {% endfor %}
 </ul>
 
-<h2>Keyboards</h2>
-
-<p>Not long after purchasing my first mechanical keyboard, I started to develop a minor obsession with collecting and customising keyboards. I've managed to collect a few over the years of different sizes and colour schemes, so here's some eye candy for you:</p>
-
-<h2>Skateboarding</h2>
-<p>As much as I hate the phrase "quarantine hobby", I most certainly did take up a new hobby while stuck at home for much of 2020: skateboarding! It's nice to have an activity that doesn't involve staring at a screen for once, and although I'm no pro, I've been able to get reasonably comfortable on the board. I should put some clips here or something?</p>
-
 <h2>Websites</h2>
-<p>This one!</p>
-<p>Prettyplan (should this get moved to tools?)</p>
-<p>Sweet and Sour Fork</p>
-<p>Hearthfinder</p>
-<p>Coding Kick</p>
 
-<h2>Music</h2>
+{% assign websites = site.showcase_items | where: "category", "Websites" %}
+<ul>
+    {% for website in websites %}
+        <li><a href="{{ website.url }}">{{ website.title }}</a></li>
+    {% endfor %}
+</ul>
 
-<p>OK, so I'm not exactly the most musically inclined person, but I do like tinkering a bit with music creation from time to time, and at one point I did write a complete chiptune song called I.M.R. which you can listen to on Bandcamp. Don't expect wonders :)</p>
+<h2>Miscellaneous</h2>
+
+{% assign misc_showoffs = site.showcase_items | where: "category", "Miscellaneous" %}
+<ul>
+    {% for misc in misc_showoffs %}
+        <li><a href="{{ misc.url }}">{{ misc.title }}</a></li>
+    {% endfor %}
+</ul>
