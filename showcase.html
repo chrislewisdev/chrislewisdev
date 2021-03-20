@@ -12,7 +12,7 @@ permalink: /showcase/
 
 <p>When I have the time/energy to work on a side project, it's almost definitely a game of some sort. I've worked on various games over the years, most of which remain broken and unfinished, but some of which I do manage to complete. You can check out some of the completed ones here :)</p>
 
-{% assign games = site.showcase_items | where: "category", "Games" %}
+{% assign games = site.showcase_items | where: "category", "Games" | reverse %}
 <ul>
     {% for game in games %}
         <li><a href="{{ game.url }}">{{ game.title }}</a></li>
@@ -23,7 +23,7 @@ permalink: /showcase/
 
 <p>I find it easiest to express myself through prepared talks, be it at conferences or just internal talks at work. These are some of the ones I've done at conferences or meetups, and should give you a bit of an idea of what sorts of stuff I like talking about!</p>
 
-{% assign talks = site.showcase_items | where: "category", "Talks" %}
+{% assign talks = site.showcase_items | where: "category", "Talks" | reverse %}
 <ul>
     {% for talk in talks %}
         <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
@@ -32,7 +32,7 @@ permalink: /showcase/
 
 <h2>Websites</h2>
 
-{% assign websites = site.showcase_items | where: "category", "Websites" %}
+{% assign websites = site.showcase_items | where: "category", "Websites" | reverse %}
 <ul>
     {% for website in websites %}
         <li><a href="{{ website.url }}">{{ website.title }}</a></li>

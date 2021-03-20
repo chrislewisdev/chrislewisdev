@@ -2,6 +2,7 @@
 layout: showcase_item
 title: Clean That Castle
 category: Games
+date: 2020-03-22
 ---
 
 ![](/assets/images/showcase/clean-that-castle.png)

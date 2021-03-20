@@ -2,11 +2,12 @@
 layout: showcase_item
 title: Blind
 category: Games
+date: 2010-10-10
 ---
 
 ![](/assets/images/showcase/blind.png)
 
-Blind was a game project I completed as part of my Year 12 Studio Art assessments. As was typical of my projects at the time, it was somewhat grand in vision but lacking in execution 🙂
+Blind was a game project I completed as part of my Year 12 Studio Art assessments, so that must place it around 2010. As was typical of my projects at the time, it was somewhat grand in vision but lacking in execution 🙂
 
 The whole idea with Blind is that you play as, er, a blind child being led aroud outside by their older brother. It was to be played using an Xbox 360 controller, so that you could use one thumbstick to move, and the other to "reach" out around the environment, feeling for obstacles, and receiving rumble feedback whenever you touched something.
 
