@@ -8,4 +8,22 @@ title: Home
     I'm a Software Developer living in Australia. I really need to find something more to say about myself...
 </p>
 
-<h2>TODO: Random spotlight</h2>
+<script type="text/javascript">
+var showcaseItems = [
+{% for item in site.showcase_items %}
+{
+    title: `{{ item.title }}`,
+    content: `{{ item.content }}`
+},
+{% endfor %}
+];
+
+window.addEventListener('DOMContentLoaded', function() {
+    var spotlightItem = showcaseItems[Math.floor(Math.random() * showcaseItems.length)];
+    document.getElementById('spotlight').innerHTML = `<h2>${spotlightItem.title}</h2><p>${spotlightItem.content}</p>`;
+});
+</script>
+
+<div id="spotlight">
+    <h2>Random spotlight</h2>
+</div>
