@@ -20,10 +20,11 @@ var showcaseItems = [
 
 window.addEventListener('DOMContentLoaded', function() {
     var spotlightItem = showcaseItems[Math.floor(Math.random() * showcaseItems.length)];
-    document.getElementById('spotlight').innerHTML = `<h2>${spotlightItem.title}</h2><p>${spotlightItem.content}</p>`;
+    document.getElementById('spotlight').innerHTML = `<h2>Random spotlight: ${spotlightItem.title}</h2><p>${spotlightItem.content}</p>`;
 });
 </script>
 
 <div id="spotlight">
     <h2>Random spotlight</h2>
+    <p>Loading...</p>
 </div>
