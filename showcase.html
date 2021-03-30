@@ -6,7 +6,7 @@ permalink: /showcase/
 
 <h1>Showcase</h1>
 
-<p>I like to build stuff. TODO say something else here</p>
+<p>I've always gotten a kick out of <em>making</em> things, and I think it's valuable to take stock of all the things you've made. So consider this page to be for both our benefits! You can get some idea of what makes me tick, while I get to reflect on the things that I'm proud of that I might have otherwise forgotten over the years.</p>
 
 <h2>Games</h2>
 
@@ -32,6 +32,8 @@ permalink: /showcase/
 
 <h2>Websites</h2>
 
+<p>I don't consider myself a web developer so to speak, though a lot of the software I work on does target the web. Nevertheless, I have published or helped publish a couple websites in my time.</p>
+
 {% assign websites = site.showcase_items | where: "category", "Websites" | reverse %}
 <ul>
     {% for website in websites %}
@@ -40,6 +42,8 @@ permalink: /showcase/
 </ul>
 
 <h2>Miscellaneous</h2>
+
+<p>For all the stuff I'm into that isn't really related...</p>
 
 {% assign misc_showoffs = site.showcase_items | where: "category", "Miscellaneous" %}
 <ul>
