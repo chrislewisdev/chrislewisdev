@@ -5,7 +5,7 @@ category: Websites
 date: 2018-06-06
 ---
 
-![](/assets/images/showcase/sweet-and-sour-fork-2.png)
+![](/assets/images/showcase/sweet-and-sour-fork.png)
 
 My fiancée has been writing her food blog "Sweet and Sour Fork" for as long as we've been together, so naturally I had to help her set up a good website for it 🙂
 
