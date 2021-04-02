@@ -9,25 +9,25 @@ body {
     color: #c0caf5;
     margin: 0;
     font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 18px;
     line-height: 1.4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-@media screen and (max-width:700px) {
-    body {
-        font-size: 1rem;
-    }
+// @media screen and (max-width:700px) {
+//     body {
+//         font-size: 1rem;
+//     }
 
-    .header p {
-        font-size: 0.8rem;
-    }
-}
+//     .header p {
+//         font-size: 0.8rem;
+//     }
+// }
 
 .container {
-    max-width: 92%;
+    max-width: 95%;
     margin: 0 auto 0 auto;
 }
 
@@ -44,7 +44,7 @@ body {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 16px;
         margin-top: 0;
     }
 
