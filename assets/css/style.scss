@@ -16,15 +16,15 @@ body {
     flex-direction: column;
 }
 
-// @media screen and (max-width:700px) {
-//     body {
-//         font-size: 1rem;
-//     }
+@media screen and (max-width:700px) {
+    body {
+        font-size: 16px;
+    }
 
-//     .header p {
-//         font-size: 0.8rem;
-//     }
-// }
+    .header p {
+        font-size: 14px;
+    }
+}
 
 .container {
     max-width: 95%;
