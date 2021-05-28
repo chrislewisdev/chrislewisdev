@@ -5,3 +5,6 @@ collections:
     permalink: /showcase/:slug/
     output: true
     category: true
+
+plugins:
+  - jekyll-feed
