@@ -9,7 +9,7 @@ body {
     color: #c0caf5;
     margin: 0;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
     min-height: 100vh;
     display: flex;
@@ -110,6 +110,8 @@ img {
 }
 
 .post-content {
+    text-align: justify;
+
     code.language-plaintext {
         background: #565f89;
         padding: 0 3px 0 3px;
