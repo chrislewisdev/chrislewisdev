@@ -1,3 +1,0 @@
-- Fill out showcases page
-- Settle on typography
-- Banner image - can we compress it more? Replace it with something else?
