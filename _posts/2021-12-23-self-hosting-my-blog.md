@@ -28,7 +28,8 @@ To my surprise, installing and configuring nginx was really simple to get starte
 
 I did want to experiment with customising the config just a little however, so I did make some tweaks in order to serve my site from a subdirectory (in case I wanted to host more than one site in the future), which looked something like this:
 
-```
+{% highlight nginx %}
+{% raw %}
 server {
     root /var/www/html/chrislewisdev;
 
@@ -40,7 +41,8 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-```
+{% endraw %}
+{% endhighlight %}
 
 ### The DNS
 
@@ -48,15 +50,17 @@ Serving my content with nginx was all well and good, but it's not much use witho
 
 I've been using Netlify to manage my DNS records, and I wanted to keep it there in case I need to fallback to my old hosting at any point, but unfortunately Netlify doesn't provide any officially-supported dynamic DNS mechanism. Luckily, some kind soul on the internet must have had this same problem, because I found [netlify-dynamic-dns](https://github.com/oscartbeaumont/netlify-dynamic-dns) from [@oscartbeaumont](https://github.com/oscartbeaumont) that provides a tool that can be run to periodically update my Netlify DNS settings to point to my current IP address. Now, I could just run the following on startup, and it takes care of it all for me:
 
-```sh
+{% highlight sh %}
+{% raw %}
 nddns -accesstoken <REDACTED> -zone chrislewis.dev -record pi -interval 10 &
-```
+{% endraw %}
+{% endhighlight %}
 
 (In typical Linux fashion, there are several ways to run scripts on startup but not all of them are guaranteed to work depending on your setup and needs. I found the most success in this case by just calling my desired script inside my rc.local file)
 
 #### Addendum
 
-Ok, it turns out the above was partially a lie. Although `nddns` was just what I needed, it had one limitation in that it wouldn't let me update the *root* DNS record for a domain, which I needed when pointing the base `chrislewis.dev` domain to the Pi. To work around this, I was able to make some small tweaks to the code to provide that as an option, and create a pull request on the main repo in case anyone else might have need of that in the future.
+Ok, it turns out the above was partially a lie. Although `nddns` was just what I needed, it had one limitation in that it wouldn't let me update the *root* DNS record for a domain, which I needed when pointing the base `chrislewis.dev` domain to the Pi. To work around this, I was able to make some small tweaks to the code to provide that as an option, and will create a pull request on the main repo in case anyone else might have need of that in the future.
 
 ### HTTPS
 
@@ -72,7 +76,8 @@ No web project of mine would be complete without a CI/CD workflow, since I'll be
 
 Initially, I thought I would need to create some small bespoke server to handle the webhooks part of this process, but as it turns out there was yet another handy tool out there for me, this time the [webhook](https://github.com/adnanh/webhook) repo by [@adnanh](https://github.com/adnanh). This tool fits my exact use case: listening for webhooks, and running scripts in response. All I had to do was provide some fairly simple config, most of which are "extras" to ensure that the webhook will only be triggered by Github itself (rather than any old person hitting the URL) and that only pushes to master will trigger the build:
 
-```yaml
+{% highlight yml %}
+{% raw %}
 - id: "build-chrislewisdev"
   execute-command: "~/builds/chrislewisdev.sh"
   command-working-directory: "~/code/chrislewisdev"
@@ -90,18 +95,21 @@ Initially, I thought I would need to create some small bespoke server to handle 
           parameter:
             source: "payload"
             name: "ref"
-```
+{% endraw %}
+{% endhighlight %}
 
 *(to be honest, one day I might still create a bespoke solution for the webhook, for fun and/or learning)*
 
 The build script itself is even simpler:
 
-```sh
+{% highlight sh %}
+{% raw %}
 #!/bin/sh
 git pull
 bundle exec jekyll build
 sudo rsync -r --delete-after _site/ /var/www/html/chrislewisdev/
-```
+{% endraw %}
+{% endhighlight %}
 
 Since all it needs to do is pull the latest commits and build everything locally, the builds are damn fast too, arguably even faster than my old Netlify builds since there's less moving parts involved.
 
@@ -111,7 +119,7 @@ This is perhaps not too surprising, but one *disadvantage* of a build process li
 
 ### Putting it live
 
-With evertything tested and working, all I had to do was tweak my existing config to use the primary chrislewis.dev domain. This meant a bit of downtime for my site since I couldn't set up the SSL certificates for that domain until it was actually pointing at my Pi, but that's not really a big deal.
+With everything tested and working, all I had to do was tweak my existing config to use the primary chrislewis.dev domain. This meant a bit of downtime for my site since I couldn't set up the SSL certificates for that domain until it was actually pointing at my Pi, but that's not really a big deal.
 
 ## Next steps
 
