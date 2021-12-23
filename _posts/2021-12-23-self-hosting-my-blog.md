@@ -4,7 +4,7 @@ description: This blog now proudly served from my home!
 layout: post
 ---
 
-As of this blog post going up, my website is now being served from my Rasperry Pi at home! This is in contrast to my previous static site hosting on [Netlify](https://www.netlify.com/), and before that on a [VentraIP](https://ventraip.com.au/) hosting plan.
+As of this blog post going up, my website is now being served from my Raspberry Pi at home! This is in contrast to my previous static site hosting on [Netlify](https://www.netlify.com/), and before that on a [VentraIP](https://ventraip.com.au/) hosting plan.
 
 ## Why?
 
