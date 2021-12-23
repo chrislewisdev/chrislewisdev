@@ -105,6 +105,10 @@ sudo rsync -r --delete-after _site/ /var/www/html/chrislewisdev/
 
 Since all it needs to do is pull the latest commits and build everything locally, the builds are damn fast too, arguably even faster than my old Netlify builds since there's less moving parts involved.
 
+#### Addendum
+
+This is perhaps not too surprising, but one *disadvantage* of a build process like this that relies on the server having all the code and dependencies to build it, is that it is somewhat fragile should the build environment change. While putting the site live, I noticed it failed to do a `git pull` a couple times because Ruby's `Gemfile.lock` had diverged from the main copy simply by way of running the build on a different machine. I am happy to accept this for the moment and consider tweaks I can make as I go that may add resilience while keeping things simple.
+
 ### Putting it live
 
 With evertything tested and working, all I had to do was tweak my existing config to use the primary chrislewis.dev domain. This meant a bit of downtime for my site since I couldn't set up the SSL certificates for that domain until it was actually pointing at my Pi, but that's not really a big deal.
