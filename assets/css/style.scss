@@ -3,10 +3,15 @@
 
 @import "monokai.css";
 
+$background-color: #24283b;
+$text-color: #c0caf5;
+$accent-color: #f7768e;
+$accent-secondary-color: #7aa2f7;
+
 body {
     font-family: Verdana, serif;
-    background-color: #24283b;
-    color: #c0caf5;
+    background-color: $background-color;
+    color: $text-color;
     margin: 0;
     font-family: monospace;
     font-size: 16px;
@@ -54,7 +59,7 @@ body {
 }
 
 nav a {
-    color: #c0caf5;
+    color: $text-color;
     padding-right: 10px;
 }
 
@@ -68,17 +73,17 @@ nav a {
 }
 
 a {
-    color: #c0caf5;
+    color: $text-color;
 }
 
 h1, h2, h3, h4 {
     margin-top: 25px;
     margin-bottom: 0px;
-    color: #f7768e;
+    color: $accent-color;
 }
 
 h3, h4, h3 a, h4 a {
-    color: #7aa2f7;
+    color: $accent-secondary-color;
 }
 
 .post {
@@ -89,6 +94,7 @@ h3, h4, h3 a, h4 a {
     p {
         margin-top: 0.8rem;
     }
+
 }
 
 blockquote {
@@ -119,6 +125,10 @@ img {
 
     pre {
         font-size: 85%;
+    }
+
+    a {
+        color: $accent-secondary-color;
     }
 }
 
