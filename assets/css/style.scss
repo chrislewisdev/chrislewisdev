@@ -130,6 +130,11 @@ img {
     a {
         color: $accent-secondary-color;
     }
+
+    hr {
+        border-color: $text-color;
+        margin: 32px 0 32px 0;
+    }
 }
 
 .iframe-container {
